@@ -30,3 +30,10 @@ app.get('/feedback', (req, res) =>
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
 );
+
+
+// Wildcard Route to send user to 404 page
+app.get('/*',function(req,res)
+{
+    req.send("");
+ });
